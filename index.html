@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./images/tiger.png" />
+    <title>Trial 1</title>
+</head>
+
+<body id="body" class="body">
+    <!-- creating a navigation bar -->
+    <nav id="navbar" class="navbar">
+        <!-- adding an image -->
+        <div class="lg">
+            <img class="logo" src="./images/tiger.png" alt="" />
+            <p>Home</p>
+        </div>
+
+
+        <!-- anchor -->
+        <div class="links">
+            <a class="link" href="#showCase" onclick="lenis.scrollTo('#showCase')">Gallery</a>
+            <a class="link" href="#footer" onclick="lenis.scrollTo('#footer')">Contact</a>
+            <a class="link" href="#">Help</a>
+        </div>
+    </nav>
+
+    <div id="slideshow" class="slideshow">
+        <p class="greetings">Welcome to <br /><b>OdinCorp</b></p>
+        <div class="slideImgs">
+            <div class="slideImg">
+                <img src="./images/3d-abstract-liquid-colorful-rendering-picjumbo-com.jpg" alt="" class="img" />
+            </div>
+            <!-- <div class="slideImg">
+                <img src="./images/ai-generated-concept-human.jpg" alt="" class="img">
+            </div> -->
+            <div class="slideImg">
+                <img src="./images/asus_rog_republic_of_gamers_4k_2-3840x2160.jpg" alt="" class="img" />
+            </div>
+            <div class="slideImg">
+                <img src="./images/synthwave-cyberwave-vaporwave-retrowave-wallpaper-picjumbo-com.jpg" alt=""
+                    class="img" />
+            </div>
+        </div>
+    </div>
+    <div class="rest">
+
+        <div class="openning">
+
+            <h3>Imagine a World Beyond.</h3>
+            <p>
+                A world with beauty, serenity, peace, a world in harmony. <br />
+                A world <b>Untouched.</b> <br />
+                A world we seek to <em>build</em> here at <b>OdinCorp</b>
+            </p>
+            <button class="btn">Join Us</button>
+
+        </div>
+
+        <img id="showCase" class="below" src="./images/ai-generated-concept-human.jpg" alt="">
+        <p class="caption">Ai-generated-concept-human</p>
+        <img class="below" src="./images/10649.jpg" alt="">
+        <p class="caption">Purple Chaos</p>
+        <img class="below" src="./images/cartoon me.jpg" alt="">
+        <p class="caption">Cartoon me</p>
+        <img class="below" src="./images/dmt-1920x1080.jpg" alt="">
+        <p class="caption">Digital Art of a Colourful Reptile</p>
+        <img class="below" src="./images/tiger.png" alt="">
+        <p class="caption">White Tiger</p>
+        <img class="below" src="./images/asus_rog_republic_of_gamers_4k_2-3840x2160.jpg" alt="">
+        <p class="caption">The Purple City</p>
+        <img class="below" src="./images/synthwave-cyberwave-vaporwave-retrowave-wallpaper-picjumbo-com.jpg" alt="">
+        <p class="caption">Majestic Sunset on an Alien landscape </p>
+
+        <div class="box"></div>
+
+        <div id="gallery" class="wrapper">
+            <div class="slider">
+                <div>
+                    <img id="img1" src="./images/3d-abstract-liquid-colorful-rendering-picjumbo-com.jpg" alt=""
+                        class="sImg" />
+                </div>
+
+                <div>
+                    <img id="img2" src="./images/asus_rog_republic_of_gamers_4k_2-3840x2160.jpg" alt="" class="sImg" />
+                </div>
+
+                <div>
+                    <img id="img3" src="./images/synthwave-cyberwave-vaporwave-retrowave-wallpaper-picjumbo-com.jpg"
+                        alt="" class="sImg" />
+                </div>
+
+                <div class="scroller">
+                    <a href="#img1" onclick="lenis.scrollTo('#img1')" class="anchor"></a>
+                    <a href="#img2" onclick="lenis.scrollTo('#img2')" class="anchor"></a>
+                    <a href="#img3" onclick="lenis.scrollTo('#img3')" class="anchor"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="scrollWatcher">.......</div>
+    <!-- <div class="hero">
+        <p class="greetings">
+            Welcome to <br><b>OdinCorp</b>
+        </p>
+    </div> -->
+
+    <div id="footer" class="footer">
+        <h2>Contacts</h2>
+        <p class="Contact">ThEo gRaPHiX <br> Call: +233 545 913 939
+            <br>Email: Boadiappiah112211@gmail.com
+        </p>
+    </div>
+    <a href="#slideshow" onclick="lenis.scrollTo('#slideshow')" class="toTop">
+        <img class="arrow" src="./images/down_3416111.png" alt="">
+    </a>
+
+</body>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+    const lenis = new Lenis();
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+</script>
+<!-- <script>
+    const message = document.querySelector('.openning')
+    const wrapper = document.querySelector('.wrapper')
+
+    gsap.set(message, {
+        xPercent: -100,
+        opacity: 0
+    })
+
+
+    gsap.to(message,
+        {
+            ScrollTrigger: {
+                trigger: wrapper,
+                start: 'bottom 10%',
+                end: 'bottom 20%',
+                markers: true
+
+            },
+
+            xPercent: 0,
+            opacity: 1
+        })
+
+    const lenis = new Lenis()
+
+
+    lenis.on('scroll', ScrollTrigger.update)
+
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000)
+    })
+
+    gsap.ticker.lagSmoothing(0)
+</script> -->
+
+</html>
