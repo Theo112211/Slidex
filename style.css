@@ -8,7 +8,7 @@
 body {
     transition: background 1s ease-in-out;
     overflow-x: hidden;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
     background: rgb(27, 27, 27);
     color: white;
     /* background-image: url(wolve.png); */
